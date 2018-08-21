@@ -227,14 +227,13 @@ class Avatar extends React.Component {
     }
 
     const scale = imgHeight / originalHeight
-    const cropRadius = imgWidth / 4
 
     this.setState(
       {
         imgWidth,
         imgHeight,
         scale,
-        cropRadius,
+        cropRadius: this.props.cropRadius,
       },
       this.initCanvas,
     )
